@@ -72,4 +72,12 @@ class MessageController extends Controller
         // after that we redirect to the message list again
         return redirect('/messages');
         }
+
+        public function put($id) { 
+
+            $result = Message::findOrFail($id)->put(); 
+
+            return redirect('/edit'); 
+            
+        }
 }
