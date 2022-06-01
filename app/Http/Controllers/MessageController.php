@@ -46,7 +46,6 @@ class MessageController extends Controller
     }
  
     public function details($id) {
- 
         // ask the database for the message with the ID that we got
         // as a parameter. It is the same ID that we used to
         // generate the links to the message details
@@ -73,11 +72,19 @@ class MessageController extends Controller
         return redirect('/messages');
         }
 
-        public function put($id) { 
+    public function update(Request $request, $id) { 
 
-            $result = Message::findOrFail($id)->put(); 
+            $request->validate([
+                'title' => 'required',
+                'content' => 'required'
+            ]);
 
-            return redirect('/edit'); 
+            $data = Message::findOrFail($id);
+            $data->title = $request->title;
+            $data->content = $request->content;
+            $data->save();
+
+            return redirect('/messages');
             
         }
 }

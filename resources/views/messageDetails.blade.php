@@ -12,16 +12,18 @@ messages.blade.php) -->
 <h3>{{$message->title}}</h3>
 <p>{{$message->content}}</p>
 
+<form action="/update/{{$message->id}}" method="post">
+<input type="text" name="title" value="{{$message->title}}"> <br> <br>
+<input type="text" name="content" value="{{$message->content}}"> <br> <br>
+@csrf
+<button type="submit">Update</button>
+</form>
+
 <form action="/message/{{$message->id}}" method="post">
 @csrf
 @method('delete')
 <button type="submit">Delete</button>
 </form>
 <br>
-<form action="/message/{{$message->id}}" method="put">
-@csrf
-@method('delete')
-<button type="submit">Edit</button>
-</form>
-<br>
+
 @endsection

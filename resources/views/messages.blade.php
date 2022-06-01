@@ -32,7 +32,8 @@ ts value for section title to "Mini Twitter" (section content is used in message
            <a href="/message/{{$message->id}}">{{$message->title}}:</a>
         </b><br>
        {{$message->content}}<br>
-       {{$message->created_at->diffForHumans()}}           
+       {{$message->created_at->diffForHumans()}}  
+       
    </li>
 @endforeach
 </ul>

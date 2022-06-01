@@ -31,4 +31,4 @@ Route::get('/message/{id}', [MessageController::class, 'details']);
 
 Route::delete('/message/{id}', [MessageController::class, 'delete']);
 
-Route::put('/edit/{id}', [MessageController::class, 'put']);
+Route::post('/update/{id}', [MessageController::class, 'update']);
