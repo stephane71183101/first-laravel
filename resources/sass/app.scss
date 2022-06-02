@@ -2,7 +2,29 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+// @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+body {
+    background-color: #ffbf57;
+    font-family: Roboto, sans-serif;
+    padding: 20px;
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 10px;
+    font-style: unset;
+}

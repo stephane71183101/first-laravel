@@ -13,8 +13,8 @@ messages.blade.php) -->
 <p>{{$message->content}}</p>
 
 <form action="/update/{{$message->id}}" method="post">
-<input type="text" name="title" value="{{$message->title}}"> <br> <br>
-<input type="text" name="content" value="{{$message->content}}"> <br> <br>
+<input type="text" name="title" value="{{$message->title}}"> <br>
+<input type="text" name="content" value="{{$message->content}}"> <br>
 @csrf
 <button type="submit">Update</button>
 </form>

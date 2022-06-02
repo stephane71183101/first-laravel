@@ -12,10 +12,12 @@ ts value for section title to "Mini Twitter" (section content is used in message
  
 <form action="/create" method="post">
    <input type="text" name="title" placeholder="Title">
+   <br>
    <input type="text" name="content" placeholder="Content">
    <!-- this blade directive is necessary for all form posts somewhere in between
        the form tags -->
    @csrf
+   <br>
    <button type="submit">Submit</button>
 </form>
  
@@ -24,18 +26,21 @@ ts value for section title to "Mini Twitter" (section content is used in message
    gets from MessageController.php. for each element of the loop which
    we call $message we print the properties (title, content
    and created_at in an <li> element -->
-@foreach ($messages as $message) 
+@foreach ($messages as $message)
+
    <li>
-   <b>
-           <!-- this link to the message details is created dynamically
-               and will point to /messages/1 for the first message -->
-           <a href="/message/{{$message->id}}">{{$message->title}}:</a>
-        </b><br>
-       {{$message->content}}<br>
-       {{$message->created_at->diffForHumans()}}  
-       
+      <h4>
+      <!-- this link to the message details is created dynamically
+            and will point to /messages/1 for the first message -->
+      <a href="/message/{{$message->id}}">{{$message->title}}:</a>
+      </h4>
+      <h6>{{$message->content}}</h6>
+      <h6>{{$message->created_at->diffForHumans()}}</h6>
+         
    </li>
+
 @endforeach
+
 </ul>
  
 @endsection
