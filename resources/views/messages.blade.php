@@ -8,7 +8,7 @@
 ts value for section title to "Mini Twitter" (section content is used in messages.blade.php) -->
 @section('content')
 
-<h2>Create new message: </h2>
+<h2>Create a new message: </h2>
  
 <form action="/create" method="post">
    <input type="text" name="title" placeholder="Title">
