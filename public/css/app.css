@@ -11283,7 +11283,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: #ffbf57;
+  background-color: hwb(37 34% 0%);
   font-family: Roboto, sans-serif;
   padding: 20px;
 }
@@ -11293,8 +11293,14 @@ body input {
 body button {
   margin-bottom: 10px;
 }
+body img {
+  border-color: rgb(255, 255, 255);
+  border-width: 2px;
+}
 
 .footer {
+  position: fixed;
+  bottom: 0;
   margin-top: 40px;
   font-size: 10px;
   font-style: unset;

@@ -15,6 +15,8 @@
    <!-- hier wird auch der Wert von der section "title" eines blade templates ausgefüllt,
    welches dieses layout "extended" -->
    <h1><a href="/messages">@yield('title')</a></h1>
+   <img src="{{ asset('/img/coloredBird.jpeg')}}">
+
    <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt,
    welches dieses layout "extended" -->
    @yield('content')
