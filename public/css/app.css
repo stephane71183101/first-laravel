@@ -11291,11 +11291,41 @@ body input {
   margin-bottom: 10px;
 }
 body button {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 body img {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border: solid;
   border-color: rgb(255, 255, 255);
   border-width: 2px;
+}
+body h2, body .h2 {
+  font-style: initial;
+}
+body h2, body .h2 {
+  font-size: 20px;
+  font-style: italic;
+  color: #717171;
+  margin-bottom: 15px;
+}
+body h3, body .h3 {
+  color: #0a58ca;
+}
+body h6, body .h6 {
+  color: white;
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+body ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.butCor {
+  margin-bottom: 10px;
 }
 
 .footer {

@@ -2,7 +2,7 @@
 @extends('layouts/master')
 
 <!--sets value for section title to "Mini Twitter" (section title is used in messages.blade.php) -->
-@section('title', 'Mini Twitter')
+@section('title', 'Mini Eye')
  
 <!--starts section content, defines some html for section content and end section content
 ts value for section title to "Mini Twitter" (section content is used in messages.blade.php) -->
@@ -34,7 +34,7 @@ ts value for section title to "Mini Twitter" (section content is used in message
             and will point to /messages/1 for the first message -->
       <a href="/message/{{$message->id}}">{{$message->title}}:</a>
       </h4>
-      <h6>{{$message->content}}</h6>
+      <h5>{{$message->content}}</h5>
       <h6>{{$message->created_at->diffForHumans()}}</h6>
          
    </li>
